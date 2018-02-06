@@ -1,3 +1,4 @@
 Sphinx==1.6.7
 matplotlib==2.0.0
 pygments==2.2.0
+travis-sphinx==1.4.3

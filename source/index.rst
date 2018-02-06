@@ -29,5 +29,6 @@ Il est conseillé de commencer par les chapitres "Les Bases" et "Méthodologie"
    modeles_lineaires
    svm
    nn
+   outils
    contribuer
 
