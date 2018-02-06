@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html{% if language is not none %} lang="{{ language }}"{% endif %}>
+<head>
+    <meta charset="utf-8">
+    {%- block htmltitle %}
+    <title>{{site_name}} | {{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+    <meta name="description" content="{{site_description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="/static/html5shiv.js"></script>
+	<script src="/static/respond.min.js"></script>
+	<![endif]-->
+    {{- metatags }}
+    <script src="https://use.fontawesome.com/f82db3f45d.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ pathto('_static/bootswatch.custom.min.css', 1) }}">
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/simple-sidebar.css', 1) }}">
+
+    <!-- css_files -->
+    {%- for css in css_files %}
+        {%- if css|attr("rel") %}
+    		<link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"{% if css.title is not none %} title="{{ css.title }}"{% endif %} />
+        {%- else %}
+    		<link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+        {%- endif %}
+    {%- endfor %}
+
+    <!-- extrahead -->
+	{%- block extrahead %}
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}">
+		<link rel="stylesheet" href="{{ pathto('_static/custom.css', 1) }}">
+    	<!-- <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" /> -->
+    	<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+	{% endblock %}
+
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {%- endif %}
+
+    {%- if use_opensearch %}
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+          href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+    {%- endif %}
+
+	{%- block linktags %}
+	    {%- if hasdoc('about') %}
+	    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+	    {%- endif %}
+	    {%- if hasdoc('genindex') %}
+	    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+	    {%- endif %}
+	    {%- if hasdoc('search') %}
+	    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+	    {%- endif %}
+	    {%- if hasdoc('copyright') %}
+	    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+	    {%- endif %}
+	    {%- if next %}
+	    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+	    {%- endif %}
+	    {%- if prev %}
+	    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+	    {%- endif %}
+	{%- endblock %}
+</head>
+
+{%- set url_root = pathto('', 1) %}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+{%- if not embedded and docstitle %}
+  {%- set titlesuffix = " &#8212; "|safe + docstitle|e %}
+{%- else %}
+  {%- set titlesuffix = "" %}
+{%- endif %}
+
+{%- block body_tag %}<body>{% endblock %}
+{%- block header %}{% endblock %}
+<!--     <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="https://juliendubiel.net/" class="navbar-brand">{{site_name}}</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav"></ul>                
+                <ul class="nav navbar-nav navbar-right"></ul>
+            </div>
+        </div>
+    </div> -->
+    <div id="wrapper">
+        <div id="sidebar">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+	            <li class="clearafter df">
+	            	<span class="al maz fa-stack fa-lg menu-toggle"><i class="fa fa-bars fa-stack-1x "></i></span>
+	            	<a href="{{ pathto(master_doc) }}" class="menu-title ar maz">{{site_name}}</a>
+	            </li>
+                <li class="clearafter df">
+                	<span class="al maz fa-stack fa-lg menu-toggle-open"><i class="fa fa-search fa-stack-1x "></i></span>
+                	<input type="text" class="ar maz form-control" style="width: 221px;" id="inputEmail" placeholder="Search a term">
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">1</div>
+                        <div class="ar deep0-title">Fiches</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li>
+                        <li><a href="/fiches/notations.html">Notations</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">2</div>
+                        <div class="ar deep0-title">Les Bases</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li>
+                        <li><a href="/les_bases/algebre_lineaire.rst">Algèbre Linéaire</a></li>
+                        <li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">3</div>
+				    	<div class="ar deep0-title">Méthodologie</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/methodologie/conception_d_un_modele.html">Conception d'un modèle</a></li>
+                        <li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d'un modèle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">4</div>
+				    	<div class="ar deep0-title">Modèles Linéaires</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/modeles_lineaires/regression_lineaire.html">Régression linéaire</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">5</div>
+                        <div class="ar deep0-title">NN</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li>
+                        <li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+                        <li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">6</div>
+                        <div class="ar deep0-title" href="/svm.html">SVM</div>
+                    </a>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">7</div>
+				    	<div class="ar deep0-title">Contribuer</div>
+				    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		    <div class="container main-contents">
+		        <div class="page-header" id="banner">
+		            <h1>{{ title }}</h1>
+		        </div>
+
+			    <ul class="breadcrumb">
+		      		<li><a href="{{ pathto(master_doc) }}">{{ _('Home') }}</a></li>
+			        {% for doc in parents %}
+			          <li><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+			        {% endfor %}
+		      		<li class="active">{{ title }}</li>
+			    </ul>
+
+			    <div class="bs-docs-section clearfix article" id="article">
+		            {% block body %}{% endblock %}
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	  var DOCUMENTATION_OPTIONS = {
+	    URL_ROOT:    '{{ url_root }}',
+	    VERSION:     '{{ release|e }}',
+	    COLLAPSE_INDEX: false,
+	    FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+	    HAS_SOURCE:  {{ has_source|lower }},
+	    SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+	  };
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="{{ pathto('_static/custom.js', 1) }}"></script>
+
+    <script>
+	    $(".menu-toggle").click(function(e) {
+	        if ($("#wrapper").hasClass("toggled")) {
+		        $("#wrapper").toggleClass("toggled");
+				$(".current").toggleClass("opened");
+			} else {
+		        $("#wrapper").toggleClass("toggled");
+				$(".opened").toggleClass("opened");				
+			}
+	    });
+
+	    function openUL(item) {
+	    	var checkElement = item.next();
+			if(checkElement.is('ul')) {
+				if (checkElement.is(':visible')) {
+	    			console.log("visible");
+					checkElement.parent().toggleClass("opened");
+				} else {
+	    			console.log("unvisible");
+					$(".opened").toggleClass("opened");
+					checkElement.parent().toggleClass("opened");
+				}
+			}
+	    };
+	    $(".menu-toggle-open").click(function(e) {
+	    	console.log(e);
+	        if ($("#wrapper").hasClass("toggled")) {
+	        	$("#wrapper").removeClass("toggled");
+				$(".opened").toggleClass("opened");
+				openUL($(this).find("a"));
+	        }
+	    });
+
+	    $('#menu li a').click(function() {openUL($(this))});
+    </script>
+
+    <!-- script_files -->
+	{%- for scriptfile in script_files %}
+		<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+	{%- endfor %}
+
+</body>
+
+
+ 
