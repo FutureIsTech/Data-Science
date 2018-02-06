@@ -130,6 +130,7 @@ html_static_path = ['jdu/static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'jdudoc'
 
+mathjax_path = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 
 # -- Options for LaTeX output ---------------------------------------------
 
