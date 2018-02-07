@@ -43,8 +43,7 @@ Par exemple on peut afficher du code avec Pygments:
 
 .. code-block:: python3
 
-   >>> for e in bb.stream_single():
-   >>>   print(e)
-   9.27201727507207
-   2.413713107525754
+   for e in bb.stream_single():
+      print(e)
+   print("Hello world")
    ...
