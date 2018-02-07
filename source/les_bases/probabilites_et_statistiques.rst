@@ -22,7 +22,7 @@ On distingue deux catégories de VA :
   * Discrètes : VA dont les valeurs sont énumérables
   * Continues : VA dont les valeurs sont tellement nombreuses qu’elles en deviennent non-énumérable
 
-.. image:: types_de_variable.png
+.. image:: img/types_de_variable.png
 
 
 Espérance (ou moyenne) :math:`\mathbb{E}(X)` :
