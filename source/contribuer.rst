@@ -35,3 +35,16 @@ Guidelines
   * Elle doit commencer par les 'requirements': c'est à dire ce que le lecteur a besoin de connaitre avant de pouvoir comprendre cette page. Si possible renvoyer vers d'autres pages du site dans "Les Bases"
   * Elle doit, dans un premier temps, vulgariser le concept, il s'agit d'expliquer concrètement à quoi sert ce modèle et comment il marche. Dans un deuxième temps, la page expliquera en détails son fonctionnement.
   * Elle doit présenter un exemple visuel (avec du code Python)
+  
+Possibilités offertes par Sphinx
+################################
+
+Par exemple on peut afficher du code avec Pygments:
+
+.. code-block:: python3
+
+   >>> for e in bb.stream_single():
+   >>>   print(e)
+   9.27201727507207
+   2.413713107525754
+   ...
