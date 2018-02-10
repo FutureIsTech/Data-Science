@@ -111,7 +111,7 @@ class CustomBuilder(StandaloneHTMLBuilder):
 
         # local TOC and global TOC tree
 
-        nav_subchapter = """<li><a href="/{chapter}/{subchapter}.html">{subchapter_name}</a></li>"""
+        nav_subchapter = """<li><a href="/{subchapter}.html">{subchapter_name}</a></li>"""
 
         nav_template = """
         <li class="menu-toggle-open">
@@ -133,14 +133,14 @@ class CustomBuilder(StandaloneHTMLBuilder):
             </ul>
         </li>
         """
-        
+
         result = ""
         for i, chapter in enumerate(self.env.toctree_includes['index']):
             if chapter in self.env.toctree_includes:
                 chapter_items = self.env.toctree_includes[chapter]
                 tmp = ""
                 for item in chapter_items:
-                    tmp += nav_subchapter.format(chapter=chapter, subchapter=item, subchapter_name=self.env.titles[item].children[0])
+                    tmp += nav_subchapter.format(subchapter=item, subchapter_name=self.env.titles[item].children[0])
                 result += nav_template_subitems.format(chapter_number=i+1, chapter_name=self.env.titles[chapter].children[0], subchapters=tmp)
             else:
                 result += nav_template.format(chapter=chapter, chapter_number=i+1, chapter_name=self.env.titles[chapter].children[0])
