@@ -31,6 +31,12 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
+import sys, os
+
+print(os.path.abspath('../custombuilder'))
+sys.path.append(os.path.abspath('../custombuilder'))
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
@@ -39,7 +45,8 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.ifconfig',
-    'matplotlib.sphinxext.plot_directive'
+    'matplotlib.sphinxext.plot_directive',
+    'custombuilder'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -92,13 +99,12 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'jdu'
-html_theme_path = ['.']
+html_theme = 'theme'
+html_theme_path = ['..']
 
 html_context = {
     'site_name': 'ML FutureIsTech',
-    'site_description': 'Jdu Sphinx Template by Julien Dubiel',
-    'nav': "to_generate"
+    'site_description': 'Jdu Sphinx Template by Julien Dubiel'
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -110,7 +116,7 @@ html_favicon = 'favicon.ico'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['jdu/static']
+html_static_path = ['../theme/static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -128,7 +134,7 @@ html_static_path = ['jdu/static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'jdudoc'
+#htmlhelp_basename = 'jdudoc'
 
 mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 
@@ -141,7 +147,7 @@ latex_elements = {
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    # 'pointsize': '10pt',
+    'pointsize': '8pt',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -155,18 +161,18 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'jdu.tex', 'jdu Documentation', 'Julien Dubiel', 'manual'),
-]
+# latex_documents = [
+#     (master_doc, 'jdu.tex', 'jdu Documentation', 'Julien Dubiel', 'manual'),
+# ]
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'jdu', 'jdu Documentation', [author], 1)
-]
+# man_pages = [
+#     (master_doc, 'jdu', 'jdu Documentation', [author], 1)
+# ]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -174,61 +180,8 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'jdu', 'jdu Documentation',
-     author, 'jdu', 'One line description of project.',
-     'Miscellaneous'),
-]
-
-# nav_subchapter = """<li><a href="#">{subchapter}</a></li>"""
-
-# nav_template = """
-# <li class="menu-toggle-open">
-#     <a class="deep0" href="#">
-#         <div class="al deep0-number">{chapter_number}</div>
-#         <div class="ar deep0-title">{chapter_name}</div>
-#     </a>
-#     <ul class="deep1">
-#         {subchapters}
-#     </ul>
-# </li>
-# """
-
-
-
-# from sphinx.builders.html import StandaloneHTMLBuilder
-# from sphinx.directives import TocTree
-# from docutils.parsers.rst import directives
-
-# class customBuilder(StandaloneHTMLBuilder):
-#     name = 'jdu'
-#     format = 'jdu'
-
-# class myTocTree(TocTree):
-#     def run(self):
-#         rst = super(myTocTree, self).run()
-#         print(rst[0][0]['includefiles'])
-#         print(rst[0][0]['maxdepth'])
-#         print(rst[0][0]['caption'])
-#         print(rst[0][0]['glob'])
-#         print(rst[0][0]['hidden'])
-#         print(rst[0][0]['includehidden'])
-#         print(rst[0][0]['numbered'])
-#         print(rst[0][0]['titlesonly'])
-#         print(rst[0][0]['entries'])
-#         for e in rst:
-#             print(e)
-#             for w in e:
-#                 print("  - ", e)
-#         print(self.__dict__)
-
-
-
-#         subchapters = '\n'.join([nav_subchapter.format(subchapter=x) for x in ['aa', 'bb', 'cc']])
-#         html_context['nav'] = '\n'.join([nav_template.format(chapter_number=i+1, chapter_name=y, subchapters=subchapters) for i, y in enumerate(["z", "y", "x"])])
-#         return rst
-
-# def setup(app):
-#     app.add_directive('toctree', myTocTree)
-#     #app.add_builder(customBuilder)
-#     print(app.__dict__)
+# texinfo_documents = [
+#     (master_doc, 'jdu', 'jdu Documentation',
+#      author, 'jdu', 'One line description of project.',
+#      'Miscellaneous'),
+# ]

@@ -1,4 +1,3 @@
 #!/bin/bash
 
-rm -r build/
-make html
+sphinx-build -a -E -j 4 -b jdu source build

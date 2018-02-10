@@ -107,6 +107,7 @@
                 	<span class="al maz fa-stack fa-lg menu-toggle-open"><i class="fa fa-search fa-stack-1x "></i></span>
                 	<input type="text" class="ar maz form-control" style="width: 221px;" id="inputEmail" placeholder="Search a term">
                 </li>
+                {{ nav }}<!-- 
                 <li class="menu-toggle-open">
                     <a class="deep0" href="#">
                         <div class="al deep0-number">1</div>
@@ -179,7 +180,7 @@
 				    	<div class="al deep0-number">8</div>
 				    	<div class="ar deep0-title">Contribuer</div>
 				    </a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -200,6 +201,8 @@
 
 			    <div class="bs-docs-section clearfix article" id="article">
 		            {% block body %}{% endblock %}
+                    
+                    
 		        </div>
 		    </div>
 		</div>
@@ -258,9 +261,8 @@
 
     <!-- script_files -->
 	{%- for scriptfile in script_files %}
-		<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+		<script defer type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
 	{%- endfor %}
-    <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script> -->
 
 </body>
 
