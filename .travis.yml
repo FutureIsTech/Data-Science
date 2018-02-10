@@ -6,7 +6,7 @@ before_script:
   - pip install -r requirements.txt
 
 script:
-  - travis-sphinx -s source build
+  - sphinx-build -b custombuilder source target/doc/build/
   - echo "ds.futureistech.com" > target/doc/build/CNAME
 
 after_success:
