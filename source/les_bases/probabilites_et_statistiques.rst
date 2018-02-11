@@ -93,7 +93,7 @@ Or, :math:`\Corr(X,X) = 1`, d'où :
 
 .. math::
 
-   \Sigma = \begin{bmatrix}1 & \ldots & \Corr(X_{\color{red}N},X_1)\\ \vdots & \ddots & \vdots \\ \Corr(X_1,X_{\color{red}N}) & \ldots & 1\end{bmatrix}
+   r = \begin{bmatrix}1 & \ldots & \Corr(X_{\color{red}N},X_1)\\ \vdots & \ddots & \vdots \\ \Corr(X_1,X_{\color{red}N}) & \ldots & 1\end{bmatrix}
 
 
 Homo/Hétéro - scédasticité
