@@ -185,3 +185,35 @@ latex_elements = {
 #      author, 'jdu', 'One line description of project.',
 #      'Miscellaneous'),
 # ]
+
+# String included at begining of all 
+rst_prolog = """
+.. role:: red
+.. role:: purple
+.. role:: blue
+.. role:: green
+.. role:: yellow
+.. role:: pink
+.. role:: orange
+.. role:: grey
+
+
+.. math::
+
+   \\definecolor{red}{RGB}{255,0,0}
+   \\definecolor{purple}{RGB}{128,0,128}
+   \\definecolor{blue}{RGB}{0,0,255}
+   \\definecolor{green}{RGB}{0,255,0}
+   \\definecolor{yellow}{RGB}{255,255,0}
+   \\definecolor{pink}{RGB}{255,192,203}
+   \\definecolor{orange}{RGB}{255,165,0}
+   \\definecolor{grey}{RGB}{128,128,128}
+   \\newcommand{\\R}{\_mathbb{R}}
+   \\newcommand{\\Z}{\\mathbb{Z}}
+   \\newcommand{\\N}{\\mathbb{N}}
+   \\newcommand{\\P}{\\mathbb{P}}
+   \\newcommand\\given[1][]{\\:#1\\vert\\:}
+   \\DeclareMathOperator{\\Corr}{Corr}
+   \\DeclareMathOperator{\\Cov}{Cov}
+
+"""
