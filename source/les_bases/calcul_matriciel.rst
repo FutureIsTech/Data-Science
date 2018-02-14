@@ -15,7 +15,7 @@ On notera les scalaires en minuscule et les matrices en majuscule.
 Taille d'une matrice
 --------------------
 
-.. math:
+.. math::
 
    M_{3,2} = \begin{bmatrix}a & b\\ c & d \\ e & f\end{bmatrix}
 
@@ -61,7 +61,7 @@ Matrice **nulle**
 Se dit d'une matrice dont tous les coefficients sont nuls.
 
 
-.. math:
+.. math::
 
    M = \begin{bmatrix}0 & \ldots &  0\\ \vdots & \ddots & \vdots \\ 0 & \ldots & 0\end{bmatrix}
 
@@ -78,7 +78,7 @@ Matrice **diagonale** (!= matrice diagonalisable)
 
 Se dit d'une matrice carrée nulle sauf sur sa diagonale.
 
-.. math:
+.. math::
 
    D = \begin{bmatrix}42 & 0 &  0\\ 0 & -36 & 0 \\ 0 & 0 & -2i\end{bmatrix} = diag(42, -36, -2i)
 
@@ -88,20 +88,20 @@ Matrice **identité**, notée :math:`I`
 
 Se dit d’une matrice carrée de taille supérieur à 1, avec des 1 sur sa diagonale et des 0 partout ailleurs.
 
-.. math:
+.. math::
 
    I = \begin{bmatrix}1 & \ldots &  0\\ \vdots & \ddots & \vdots \\ 0 & \ldots & 1\end{bmatrix} = diag(1, ..., 1)
 
 Pour une matrice identité de taille 2, on pourra la noter :math:`I_2`.
 
-.. math:
+.. math::
 
    I_2 = \begin{bmatrix}1 & 0\\ 0 & 1\end{bmatrix} = diag(1, 1)
 
 
 La matrice identité dispose d'une propriété interessante (:pink:`TODO: la définir`) :
 
-.. math:
+.. math::
 
    A_{2,3} = \begin{bmatrix}a & b & c \\ d & e & f\end{bmatrix} = \begin{bmatrix}1 & 0 \\ 0 & 1 \end{bmatrix}*\begin{bmatrix}a & b & c \\ d & e & f\end{bmatrix} = \begin{bmatrix}a & b & c \\ d & e & f\end{bmatrix} * \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}
 
@@ -117,12 +117,12 @@ Matrice transposée, notée :math:`U^{T}`
 
 C'est une transformation transposant une matrice par rapport à sa diagonale.
 
-.. math:
+.. math::
 
    \textrm{Si } U = \begin{bmatrix}1+i & 1 & i-2 \\ 2 & 4 & 1 \\ 3 & -i & i\end{bmatrix}\textrm{alors } U^{T} = \begin{bmatrix}1+i & 2 & 3 \\ 1 & 4 & -i \\ i-2 & 1 & i\end{bmatrix}
 
 
-.. math:
+.. math::
 
    \textrm{Si } U = \begin{bmatrix}1 & 2 \\ 3 & 4 \\ 5 & 6\end{bmatrix}\textrm{alors } U^{T} = \begin{bmatrix}1 & 3 & 5 \\ 2 & 4 & 6\end{bmatrix}
 
