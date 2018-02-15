@@ -39,16 +39,43 @@ Guidelines
 Possibilités offertes par Sphinx
 ################################
 
-Par exemple on peut afficher du code avec Pygments:
+Pour voir comment réaliser les exemples suivants, il vous suffit d'éditer le code source de cette page sur Github par exemple.
+
+Afficher du code avec coloration syntaxique
+-------------------------------------------
+
+Cette option utilise `Pygments <http://pygments.org/>`_.
 
 .. code-block:: python3
+   :linenos:
 
    for e in bb.stream_single():
       print(e)
    print("Hello world")
-   ...
 
 
+
+Afficher des formules mathématiques
+-----------------------------------
+
+Cette option utilise `MathJax <https://www.mathjax.org/>`_ (et peut-être `KaTeX <https://khan.github.io/KaTeX/>`_ quand ce sera assez mature).
+Et oui il est aussi possible de colorer ses formules pour ajouter en compréhension :D
+
+.. math::
+
+   \color{red} X_{\color{purple} k} \color{black} =
+   \color{blue} \frac{1}{N} \sum_{n=0}^{N-1}
+   \color{green}x_n \color{orange}
+   e^{\mathrm{i} \color{pink} 2\pi \color{purple}k \color{blue} \frac{n}{N}}
+
+
+To find the :red:`energy` at a particular :purple:`frequency`, :orange:`spin` your :green:`signal` around a :pink:`circle` at that :purple:`frequency`, and :blue:`average` a bunch of points along that path.
+
+
+Afficher le schéma créé par du code Python
+------------------------------------------
+
+Oui oui ! Ce schéma est bien généré à la volée à partir de code python écrit dans le fichier ReST source de cette page !
 
 .. plot::
 

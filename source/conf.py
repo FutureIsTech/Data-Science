@@ -94,9 +94,9 @@ exclude_patterns = []
 todo_include_todos = True
 
 
-# -- Options for HTML output ----------------------------------------------
+# -- Options for RGB output ----------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
+# The theme to use for RGB and RGB Help pages.  See the documentation for
 # a list of builtin themes.
 #
 html_theme = 'theme'
@@ -131,12 +131,12 @@ html_static_path = ['../theme/static']
 #}
 
 
-# -- Options for HTMLHelp output ------------------------------------------
+# -- Options for RGBHelp output ------------------------------------------
 
-# Output file base name for HTML help builder.
+# Output file base name for RGB help builder.
 #htmlhelp_basename = 'jdudoc'
 
-mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+mathjax_path = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_RGBorMML'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -197,17 +197,18 @@ rst_prolog = """
 .. role:: orange
 .. role:: grey
 
-
 .. math::
 
    \\definecolor{red}{RGB}{255,0,0}
-   \\definecolor{purple}{RGB}{128,0,128}
-   \\definecolor{blue}{RGB}{0,0,255}
-   \\definecolor{green}{RGB}{0,255,0}
-   \\definecolor{yellow}{RGB}{255,255,0}
-   \\definecolor{pink}{RGB}{255,192,203}
-   \\definecolor{orange}{RGB}{255,165,0}
+   \\definecolor{purple}{RGB}{154,0,154}
+   \\definecolor{blue}{RGB}{0,0,224}
+   \\definecolor{green}{RGB}{0,187,0}
+   \\definecolor{yellow}{RGB}{255,234,0}
+   \\definecolor{pink}{RGB}{255,77,166}
+   \\definecolor{orange}{RGB}{255,120,0}
    \\definecolor{grey}{RGB}{128,128,128}
+   \\definecolor{black}{RGB}{0,0,0}
+   \\definecolor{white}{RGB}{255,255,255}
    \\newcommand{\\R}{\_mathbb{R}}
    \\newcommand{\\Z}{\\mathbb{Z}}
    \\newcommand{\\N}{\\mathbb{N}}
