@@ -23,9 +23,6 @@ body {
     background-color: #ffffff;
     padding: 25px 40px;
     margin-bottom: 20px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     box-shadow: 0 0 0 0, 0 6px 12px rgba(34, 34, 34, 0.1);
 }
 .article {
@@ -77,6 +74,18 @@ h3>.math {
 }
 .breadcrumb {
     margin-bottom: 0;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 .breadcrumb > .active {
     color: #bbbbbb;
@@ -164,6 +173,8 @@ pre {
     border-radius: none;
 }
 .highlighttable {
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
 }
 td.linenos {
@@ -172,5 +183,7 @@ td.linenos {
 
 .figure {
     margin: 0 auto;
-    width: max-content;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content
 }
