@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>ML FutureIsTech | Data Science by FutureIsTech</title>
+    <meta name="description" content="Jdu Sphinx Template by Julien Dubiel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="/static/html5shiv.js"></script>
+	<script src="/static/respond.min.js"></script>
+	<![endif]-->
+    <script src="https://use.fontawesome.com/f82db3f45d.js"></script>
+    <script type="text/javascript" async defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="_static/bootswatch.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="_static/simple-sidebar.css">
+
+    <!-- css_files -->
+
+    <!-- extrahead -->
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="_static/favicon.ico">
+		<link rel="stylesheet" href="_static/custom.css">
+    	<!-- <link rel="stylesheet" href="_static/basic.css" type="text/css" /> -->
+    	<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+	
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+	    <link rel="index" title="Index" href="genindex.html" />
+	    <link rel="search" title="Recherche" href="search.html" />
+	    <link rel="next" title="Fiches" href="fiches.html" />
+</head><body>
+<!--     <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="https://juliendubiel.net/" class="navbar-brand">ML FutureIsTech</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav"></ul>                
+                <ul class="nav navbar-nav navbar-right"></ul>
+            </div>
+        </div>
+    </div> -->
+    <div id="wrapper">
+        <div id="sidebar">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+	            <li class="clearafter df">
+	            	<span class="al maz fa-stack fa-lg menu-toggle"><i class="fa fa-bars fa-stack-1x "></i></span>
+	            	<a href="#" class="menu-title ar maz">ML FutureIsTech</a>
+	            </li>
+                <li class="clearafter df">
+                	<span class="al maz fa-stack fa-lg menu-toggle-open"><i class="fa fa-search fa-stack-1x "></i></span>
+                	<input type="text" class="ar maz form-control" style="width: 221px;" id="inputEmail" placeholder="Search a term">
+                </li>
+                
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">1</div>
+                <div class="ar deep0-title">Fiches</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li><li><a href="/fiches/notations.html">Notations</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">2</div>
+                <div class="ar deep0-title">Les Bases</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li><li><a href="/les_bases/calcul_matriciel.html">Calcul matriciel</a></li><li><a href="/les_bases/algebre_lineaire.html">Algèbre Linéaire</a></li><li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">3</div>
+                <div class="ar deep0-title">Methodologie</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/methodologie/conception_d_un_modele.html">Conception d’un modèle</a></li><li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d’un modèle</a></li><li><a href="/methodologie/optimisation_hyperparametres.html">Optimisation des hyperparamètres d’un modèle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">4</div>
+                <div class="ar deep0-title">Modèles Linéaires</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/modeles_lineaires/regression_lineaire.html">Régression Linéaire</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/svm.html">
+                <div class="al deep0-number">5</div>
+                <div class="ar deep0-title">Séparateurs à vaste marge (SVM)</div>
+            </a>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">6</div>
+                <div class="ar deep0-title">Réseaux de neuronnes</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li><li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li><li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">7</div>
+                <div class="ar deep0-title">Outils</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/outils/spark.html">Spark</a></li><li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/contribuer.html">
+                <div class="al deep0-number">8</div>
+                <div class="ar deep0-title">Contribuer</div>
+            </a>
+        </li>
+        <!-- 
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">1</div>
+                        <div class="ar deep0-title">Fiches</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li>
+                        <li><a href="/fiches/notations.html">Notations</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">2</div>
+                        <div class="ar deep0-title">Les Bases</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li>
+                        <li><a href="/les_bases/algebre_lineaire.rst">Algèbre Linéaire</a></li>
+                        <li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">3</div>
+				    	<div class="ar deep0-title">Méthodologie</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/methodologie/conception_d_un_modele.html">Conception d'un modèle</a></li>
+                        <li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d'un modèle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">4</div>
+				    	<div class="ar deep0-title">Modèles Linéaires</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/modeles_lineaires/regression_lineaire.html">Régression linéaire</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">5</div>
+                        <div class="ar deep0-title">NN</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li>
+                        <li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+                        <li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">6</div>
+                        <div class="ar deep0-title" href="/svm.html">SVM</div>
+                    </a>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">7</div>
+                        <div class="ar deep0-title">Outils</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/outils/spark.html">Spark</a></li>
+                        <li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">8</div>
+				    	<div class="ar deep0-title">Contribuer</div>
+				    </a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		    <div class="container main-contents">
+		        <div class="page-header" id="banner">
+		            <h1>Data Science by FutureIsTech</h1>
+		        </div>
+
+			    <ul class="breadcrumb">
+		      		<li><a href="#">Home</a></li>
+			        
+		      		<li class="active">Data Science by FutureIsTech</li>
+			    </ul>
+
+			    <div class="bs-docs-section clearfix article" id="article">
+		            
+  <div class="math">
+\[\definecolor{red}{RGB}{255,0,0}
+\definecolor{purple}{RGB}{154,0,154}
+\definecolor{blue}{RGB}{0,0,224}
+\definecolor{green}{RGB}{0,187,0}
+\definecolor{yellow}{RGB}{255,234,0}
+\definecolor{pink}{RGB}{255,77,166}
+\definecolor{orange}{RGB}{255,120,0}
+\definecolor{grey}{RGB}{128,128,128}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{white}{RGB}{255,255,255}
+\newcommand{\R}{\_mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand\given[1][]{\:#1\vert\:}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Cov}{Cov}\]</div>
+<div class="section" id="data-science-by-futureistech">
+<h1>Data Science by FutureIsTech<a class="headerlink" href="#data-science-by-futureistech" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce site est destiné à fournir des éléments permettant de débuter en Data Science, mais aussi, selon le développement des chapitres, d’approfondir des sujets particuliers.</p>
+<p>C’est un site collaboratif dans le sens où tout le monde peut éditer les pages de ce site sur <a class="reference external" href="contribuer">Github</a>. Les Pull/Requests sont le moyen de modérer le contenu que vous modifierez ou ajouterez.</p>
+</div>
+<div class="section" id="sommaire">
+<h1>Sommaire<a class="headerlink" href="#sommaire" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Il est conseillé de commencer par les chapitres «&nbsp;Les Bases&nbsp;» et «&nbsp;Méthodologie&nbsp;»</p>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Page de recherche</span></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fiches.html">Fiches</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiches/vocabulaire.html">Vocabulaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fiches/notations.html">Notations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="les_bases.html">Les Bases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#les-variables-aleatoires">Les variables aléatoires</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#les-differents-types-de-variable-aleatoire-v-a">Les différents types de variable aléatoire (v.a.)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#esperance-ou-moyenne">Espérance (ou moyenne) <span class="math">\(\mathbb{E}(X)\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#variance">Variance <span class="math">\(V(X)\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#ecart-type">Ecart type <span class="math">\(\sigma_X\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#covariance">Covariance <span class="math">\(\Cov(X,Y)\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#correlation">Corrélation <span class="math">\(\Corr(X,Y)\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#homo-hetero-scedasticite">Homo/Hétéro - scédasticité</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#theoreme-de-bayes">Théorème de Bayes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="les_bases/probabilites_et_statistiques.html#dans-le-cas-binomial">Dans le cas binomial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="les_bases/calcul_matriciel.html">Calcul matriciel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="les_bases/calcul_matriciel.html#notations">Notations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#scalaire-ou-matrice">Scalaire ou Matrice ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#taille-d-une-matrice">Taille d’une matrice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#comment-parler-d-un-element-specifique-dans-la-matrice">Comment parler d’un élément spécifique dans la matrice ?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="les_bases/calcul_matriciel.html#definitions">Définitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#proprietes-des-matrices">Propriétés des matrices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-creuse-ou-sparse-matrix">Matrice <strong>creuse</strong> (ou <strong>sparse</strong> matrix)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-pleine-ou-dense-matrix">Matrice <strong>pleine</strong> (ou <strong>dense</strong> matrix)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-nulle">Matrice <strong>nulle</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-carree">Matrice <strong>carrée</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-diagonale-matrice-diagonalisable">Matrice <strong>diagonale</strong> (!= matrice diagonalisable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-identite-notee">Matrice <strong>identité</strong>, notée <span class="math">\(I\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-de-passage">Matrice de passage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="les_bases/calcul_matriciel.html#matrice-transposee-notee">Matrice transposée, notée <span class="math">\(U^{T}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="les_bases/algebre_lineaire.html">Algèbre Linéaire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="les_bases/algebre_lineaire.html#definition">Définition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="methodologie.html">Methodologie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="methodologie/conception_d_un_modele.html">Conception d’un modèle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d’un modèle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="methodologie/mesurer_la_qualite_d_un_modele.html#cross-validation">Cross-validation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="methodologie/optimisation_hyperparametres.html">Optimisation des hyperparamètres d’un modèle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modeles_lineaires.html">Modèles Linéaires</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modeles_lineaires/regression_lineaire.html">Régression Linéaire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="svm.html">Séparateurs à vaste marge (SVM)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="svm.html#objectif">Objectif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svm.html#vecteur-support">Vecteur support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svm.html#hard-margin">Hard margin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svm.html#soft-margin">Soft margin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svm.html#kernel">Kernel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="svm.html#proprietes">Propriétés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="svm.html#fonctions-kernels-communes">Fonctions kernels communes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="svm.html#la-matrice-de-gram">La matrice de Gram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="svm.html#exemple">Exemple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="svm.html#astuces">Astuces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">Réseaux de neuronnes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nn/mlp.html">Perceptron Multicouche (MLP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nn/dnn.html">Deep Neural network (DNN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outils.html">Outils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outils/spark.html">Spark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outils/cuda.html">Nvidia CUDA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribuer.html">Contribuer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribuer.html#principe">Principe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribuer.html#editer-les-pages">Editer les pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribuer.html#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribuer.html#possibilites-offertes-par-sphinx">Possibilités offertes par Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contribuer.html#afficher-du-code-avec-coloration-syntaxique">Afficher du code avec coloration syntaxique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contribuer.html#afficher-des-formules-mathematiques">Afficher des formules mathématiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contribuer.html#afficher-le-schema-cree-par-du-code-python">Afficher le schéma créé par du code Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+                    
+                    
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	  var DOCUMENTATION_OPTIONS = {
+	    URL_ROOT:    './',
+	    VERSION:     '',
+	    COLLAPSE_INDEX: false,
+	    FILE_SUFFIX: '.html',
+	    HAS_SOURCE:  true,
+	    SOURCELINK_SUFFIX: '.txt'
+	  };
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="_static/custom.js"></script>
+
+    <script>
+	    $(".menu-toggle").click(function(e) {
+	        if ($("#wrapper").hasClass("toggled")) {
+		        $("#wrapper").toggleClass("toggled");
+				$(".current").toggleClass("opened");
+			} else {
+		        $("#wrapper").toggleClass("toggled");
+				$(".opened").toggleClass("opened");				
+			}
+	    });
+
+	    function openUL(item) {
+	    	var checkElement = item.next();
+			if(checkElement.is('ul')) {
+				if (checkElement.is(':visible')) {
+	    			console.log("visible");
+					checkElement.parent().toggleClass("opened");
+				} else {
+	    			console.log("unvisible");
+					$(".opened").toggleClass("opened");
+					checkElement.parent().toggleClass("opened");
+				}
+			}
+	    };
+	    $(".menu-toggle-open").click(function(e) {
+	    	console.log(e);
+	        if ($("#wrapper").hasClass("toggled")) {
+	        	$("#wrapper").removeClass("toggled");
+				$(".opened").toggleClass("opened");
+				openUL($(this).find("a"));
+	        }
+	    });
+
+	    $('#menu li a').click(function() {openUL($(this))});
+    </script>
+
+    <!-- script_files -->
+		<script defer type="text/javascript" src="_static/jquery.js"></script>
+		<script defer type="text/javascript" src="_static/underscore.js"></script>
+		<script defer type="text/javascript" src="_static/doctools.js"></script>
+		<script defer type="text/javascript" src="_static/translations.js"></script>
+		<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_RGBorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: {
+                extensions: ["color.js"]
+            }
+        });
+    </script>
+
+</body>
+
+
+ 

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>ML FutureIsTech | Contribuer</title>
+    <meta name="description" content="Jdu Sphinx Template by Julien Dubiel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="/static/html5shiv.js"></script>
+	<script src="/static/respond.min.js"></script>
+	<![endif]-->
+    <script src="https://use.fontawesome.com/f82db3f45d.js"></script>
+    <script type="text/javascript" async defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="_static/bootswatch.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="_static/simple-sidebar.css">
+
+    <!-- css_files -->
+
+    <!-- extrahead -->
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="_static/favicon.ico">
+		<link rel="stylesheet" href="_static/custom.css">
+    	<!-- <link rel="stylesheet" href="_static/basic.css" type="text/css" /> -->
+    	<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+	
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+	    <link rel="index" title="Index" href="genindex.html" />
+	    <link rel="search" title="Recherche" href="search.html" />
+	    <link rel="prev" title="Nvidia CUDA" href="outils/cuda.html" />
+</head><body>
+<!--     <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="https://juliendubiel.net/" class="navbar-brand">ML FutureIsTech</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav"></ul>                
+                <ul class="nav navbar-nav navbar-right"></ul>
+            </div>
+        </div>
+    </div> -->
+    <div id="wrapper">
+        <div id="sidebar">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+	            <li class="clearafter df">
+	            	<span class="al maz fa-stack fa-lg menu-toggle"><i class="fa fa-bars fa-stack-1x "></i></span>
+	            	<a href="index.html" class="menu-title ar maz">ML FutureIsTech</a>
+	            </li>
+                <li class="clearafter df">
+                	<span class="al maz fa-stack fa-lg menu-toggle-open"><i class="fa fa-search fa-stack-1x "></i></span>
+                	<input type="text" class="ar maz form-control" style="width: 221px;" id="inputEmail" placeholder="Search a term">
+                </li>
+                
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">1</div>
+                <div class="ar deep0-title">Fiches</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li><li><a href="/fiches/notations.html">Notations</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">2</div>
+                <div class="ar deep0-title">Les Bases</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li><li><a href="/les_bases/calcul_matriciel.html">Calcul matriciel</a></li><li><a href="/les_bases/algebre_lineaire.html">Algèbre Linéaire</a></li><li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">3</div>
+                <div class="ar deep0-title">Methodologie</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/methodologie/conception_d_un_modele.html">Conception d’un modèle</a></li><li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d’un modèle</a></li><li><a href="/methodologie/optimisation_hyperparametres.html">Optimisation des hyperparamètres d’un modèle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">4</div>
+                <div class="ar deep0-title">Modèles Linéaires</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/modeles_lineaires/regression_lineaire.html">Régression Linéaire</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/svm.html">
+                <div class="al deep0-number">5</div>
+                <div class="ar deep0-title">Séparateurs à vaste marge (SVM)</div>
+            </a>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">6</div>
+                <div class="ar deep0-title">Réseaux de neuronnes</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li><li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li><li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">7</div>
+                <div class="ar deep0-title">Outils</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/outils/spark.html">Spark</a></li><li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/contribuer.html">
+                <div class="al deep0-number">8</div>
+                <div class="ar deep0-title">Contribuer</div>
+            </a>
+        </li>
+        <!-- 
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">1</div>
+                        <div class="ar deep0-title">Fiches</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li>
+                        <li><a href="/fiches/notations.html">Notations</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">2</div>
+                        <div class="ar deep0-title">Les Bases</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li>
+                        <li><a href="/les_bases/algebre_lineaire.rst">Algèbre Linéaire</a></li>
+                        <li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">3</div>
+				    	<div class="ar deep0-title">Méthodologie</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/methodologie/conception_d_un_modele.html">Conception d'un modèle</a></li>
+                        <li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d'un modèle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">4</div>
+				    	<div class="ar deep0-title">Modèles Linéaires</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/modeles_lineaires/regression_lineaire.html">Régression linéaire</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">5</div>
+                        <div class="ar deep0-title">NN</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li>
+                        <li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+                        <li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">6</div>
+                        <div class="ar deep0-title" href="/svm.html">SVM</div>
+                    </a>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">7</div>
+                        <div class="ar deep0-title">Outils</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/outils/spark.html">Spark</a></li>
+                        <li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">8</div>
+				    	<div class="ar deep0-title">Contribuer</div>
+				    </a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		    <div class="container main-contents">
+		        <div class="page-header" id="banner">
+		            <h1>Contribuer</h1>
+		        </div>
+
+			    <ul class="breadcrumb">
+		      		<li><a href="index.html">Home</a></li>
+			        
+		      		<li class="active">Contribuer</li>
+			    </ul>
+
+			    <div class="bs-docs-section clearfix article" id="article">
+		            
+  <div class="math">
+\[\definecolor{red}{RGB}{255,0,0}
+\definecolor{purple}{RGB}{154,0,154}
+\definecolor{blue}{RGB}{0,0,224}
+\definecolor{green}{RGB}{0,187,0}
+\definecolor{yellow}{RGB}{255,234,0}
+\definecolor{pink}{RGB}{255,77,166}
+\definecolor{orange}{RGB}{255,120,0}
+\definecolor{grey}{RGB}{128,128,128}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{white}{RGB}{255,255,255}
+\newcommand{\R}{\_mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand\given[1][]{\:#1\vert\:}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Cov}{Cov}\]</div>
+<div class="section" id="contribuer">
+<h1>Contribuer<a class="headerlink" href="#contribuer" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="principe">
+<h2>Principe<a class="headerlink" href="#principe" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le contenu de ce site est généré à partir de fichiers .rst permettant :</p>
+<ul class="simple">
+<li>De ne pas avoir à toucher à la mise en page</li>
+<li>De pouvoir écrire des formules en LaTeX</li>
+<li>De pouvoir afficher du code formaté avec <a class="reference external" href="http://pygments.org/">Pygments</a></li>
+<li>De pouvoir, par exemple, afficher le schéma matplotlib correspondant au code qui l’a généré</li>
+</ul>
+<p>Le format .rst (reStructuredText) est décrit rapidement dans ce <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">Quickref</a></p>
+</div>
+<div class="section" id="editer-les-pages">
+<h2>Editer les pages<a class="headerlink" href="#editer-les-pages" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez directement éditer les pages via <a class="reference external" href="https://github.com/FutureIsTech/Data-Science">Github</a> (et effectuer une Pull Request) afin de modifier les pages existantes mais vous pouvez aussi proposer d’en ajouter.</p>
+<p>Toute correction, ajout ou modification est la bienvenue.</p>
+<p>Vous pouvez aussi proposer des modifications du template Sphinx pour améliorer l’ergonomie du site.</p>
+</div>
+<div class="section" id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Le contenu doit être en Français mais nous acceptons les termes communs en anglais comme «&nbsp;Data Science&nbsp;», «&nbsp;features&nbsp;», «&nbsp;kernels&nbsp;»… tant qu’ils sont définis dans <a class="reference external" href="/les_bases.html">Les Bases</a>.</li>
+<li>Une page sur une notion doit respecter une certaine forme:<ul>
+<li>Elle doit commencer par les “requirements”: c’est à dire ce que le lecteur a besoin de connaitre avant de pouvoir comprendre cette page. Si possible renvoyer vers d’autres pages du site dans «&nbsp;Les Bases&nbsp;»</li>
+<li>Elle doit, dans un premier temps, vulgariser le concept, il s’agit d’expliquer concrètement à quoi sert ce modèle et comment il marche. Dans un deuxième temps, la page expliquera en détails son fonctionnement.</li>
+<li>Elle doit présenter un exemple visuel (avec du code Python)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="possibilites-offertes-par-sphinx">
+<h2>Possibilités offertes par Sphinx<a class="headerlink" href="#possibilites-offertes-par-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour voir comment réaliser les exemples suivants, il vous suffit d’éditer le code source de cette page sur Github par exemple.</p>
+<div class="section" id="afficher-du-code-avec-coloration-syntaxique">
+<h3>Afficher du code avec coloration syntaxique<a class="headerlink" href="#afficher-du-code-avec-coloration-syntaxique" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette option utilise <a class="reference external" href="http://pygments.org/">Pygments</a>.</p>
+<div class="highlight-python3"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">bb</span><span class="o">.</span><span class="n">stream_single</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="afficher-des-formules-mathematiques">
+<h3>Afficher des formules mathématiques<a class="headerlink" href="#afficher-des-formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette option utilise <a class="reference external" href="https://www.mathjax.org/">MathJax</a> (et peut-être <a class="reference external" href="https://khan.github.io/KaTeX/">KaTeX</a> quand ce sera assez mature).
+Et oui il est aussi possible de colorer ses formules pour ajouter en compréhension :D</p>
+<div class="math">
+\[\color{red} X_{\color{purple} k} \color{black} =
+\color{blue} \frac{1}{N} \sum_{n=0}^{N-1}
+\color{green}x_n \color{orange}
+e^{\mathrm{i} \color{pink} 2\pi \color{purple}k \color{blue} \frac{n}{N}}\]</div>
+<p>To find the <span class="red">energy</span> at a particular <span class="purple">frequency</span>, <span class="orange">spin</span> your <span class="green">signal</span> around a <span class="pink">circle</span> at that <span class="purple">frequency</span>, and <span class="blue">average</span> a bunch of points along that path.</p>
+</div>
+<div class="section" id="afficher-le-schema-cree-par-du-code-python">
+<h3>Afficher le schéma créé par du code Python<a class="headerlink" href="#afficher-le-schema-cree-par-du-code-python" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Oui oui ! Ce schéma est bien généré à la volée à partir de code Python écrit dans le fichier ReST source de cette page !</p>
+<p>(<a class="reference external" href=".//contribuer-1.py">Source code</a>, <a class="reference external" href=".//contribuer-1.png">png</a>, <a class="reference external" href=".//contribuer-1.hires.png">hires.png</a>, <a class="reference external" href=".//contribuer-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="_images/contribuer-1.png" src="_images/contribuer-1.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+                    
+                    
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	  var DOCUMENTATION_OPTIONS = {
+	    URL_ROOT:    './',
+	    VERSION:     '',
+	    COLLAPSE_INDEX: false,
+	    FILE_SUFFIX: '.html',
+	    HAS_SOURCE:  true,
+	    SOURCELINK_SUFFIX: '.txt'
+	  };
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="_static/custom.js"></script>
+
+    <script>
+	    $(".menu-toggle").click(function(e) {
+	        if ($("#wrapper").hasClass("toggled")) {
+		        $("#wrapper").toggleClass("toggled");
+				$(".current").toggleClass("opened");
+			} else {
+		        $("#wrapper").toggleClass("toggled");
+				$(".opened").toggleClass("opened");				
+			}
+	    });
+
+	    function openUL(item) {
+	    	var checkElement = item.next();
+			if(checkElement.is('ul')) {
+				if (checkElement.is(':visible')) {
+	    			console.log("visible");
+					checkElement.parent().toggleClass("opened");
+				} else {
+	    			console.log("unvisible");
+					$(".opened").toggleClass("opened");
+					checkElement.parent().toggleClass("opened");
+				}
+			}
+	    };
+	    $(".menu-toggle-open").click(function(e) {
+	    	console.log(e);
+	        if ($("#wrapper").hasClass("toggled")) {
+	        	$("#wrapper").removeClass("toggled");
+				$(".opened").toggleClass("opened");
+				openUL($(this).find("a"));
+	        }
+	    });
+
+	    $('#menu li a').click(function() {openUL($(this))});
+    </script>
+
+    <!-- script_files -->
+		<script defer type="text/javascript" src="_static/jquery.js"></script>
+		<script defer type="text/javascript" src="_static/underscore.js"></script>
+		<script defer type="text/javascript" src="_static/doctools.js"></script>
+		<script defer type="text/javascript" src="_static/translations.js"></script>
+		<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_RGBorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: {
+                extensions: ["color.js"]
+            }
+        });
+    </script>
+
+</body>
+
+
+ 

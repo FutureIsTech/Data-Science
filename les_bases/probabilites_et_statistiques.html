@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>ML FutureIsTech | Probabilités et Statistiques</title>
+    <meta name="description" content="Jdu Sphinx Template by Julien Dubiel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="/static/html5shiv.js"></script>
+	<script src="/static/respond.min.js"></script>
+	<![endif]-->
+    <script src="https://use.fontawesome.com/f82db3f45d.js"></script>
+    <script type="text/javascript" async defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../_static/bootswatch.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="../_static/simple-sidebar.css">
+
+    <!-- css_files -->
+
+    <!-- extrahead -->
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="../_static/favicon.ico">
+		<link rel="stylesheet" href="../_static/custom.css">
+    	<!-- <link rel="stylesheet" href="../_static/basic.css" type="text/css" /> -->
+    	<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+	
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+	    <link rel="index" title="Index" href="../genindex.html" />
+	    <link rel="search" title="Recherche" href="../search.html" />
+	    <link rel="next" title="Calcul matriciel" href="calcul_matriciel.html" />
+	    <link rel="prev" title="Les Bases" href="../les_bases.html" />
+</head><body>
+<!--     <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="https://juliendubiel.net/" class="navbar-brand">ML FutureIsTech</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav"></ul>                
+                <ul class="nav navbar-nav navbar-right"></ul>
+            </div>
+        </div>
+    </div> -->
+    <div id="wrapper">
+        <div id="sidebar">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+	            <li class="clearafter df">
+	            	<span class="al maz fa-stack fa-lg menu-toggle"><i class="fa fa-bars fa-stack-1x "></i></span>
+	            	<a href="../index.html" class="menu-title ar maz">ML FutureIsTech</a>
+	            </li>
+                <li class="clearafter df">
+                	<span class="al maz fa-stack fa-lg menu-toggle-open"><i class="fa fa-search fa-stack-1x "></i></span>
+                	<input type="text" class="ar maz form-control" style="width: 221px;" id="inputEmail" placeholder="Search a term">
+                </li>
+                
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">1</div>
+                <div class="ar deep0-title">Fiches</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li><li><a href="/fiches/notations.html">Notations</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">2</div>
+                <div class="ar deep0-title">Les Bases</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li><li><a href="/les_bases/calcul_matriciel.html">Calcul matriciel</a></li><li><a href="/les_bases/algebre_lineaire.html">Algèbre Linéaire</a></li><li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">3</div>
+                <div class="ar deep0-title">Methodologie</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/methodologie/conception_d_un_modele.html">Conception d’un modèle</a></li><li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d’un modèle</a></li><li><a href="/methodologie/optimisation_hyperparametres.html">Optimisation des hyperparamètres d’un modèle</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">4</div>
+                <div class="ar deep0-title">Modèles Linéaires</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/modeles_lineaires/regression_lineaire.html">Régression Linéaire</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/svm.html">
+                <div class="al deep0-number">5</div>
+                <div class="ar deep0-title">Séparateurs à vaste marge (SVM)</div>
+            </a>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">6</div>
+                <div class="ar deep0-title">Réseaux de neuronnes</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li><li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li><li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="#">
+                <div class="al deep0-number">7</div>
+                <div class="ar deep0-title">Outils</div>
+            </a>
+            <ul class="deep1">
+                <li><a href="/outils/spark.html">Spark</a></li><li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+            </ul>
+        </li>
+        
+        <li class="menu-toggle-open">
+            <a class="deep0" href="/contribuer.html">
+                <div class="al deep0-number">8</div>
+                <div class="ar deep0-title">Contribuer</div>
+            </a>
+        </li>
+        <!-- 
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">1</div>
+                        <div class="ar deep0-title">Fiches</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/fiches/vocabulaire.html">Vocabulaire</a></li>
+                        <li><a href="/fiches/notations.html">Notations</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">2</div>
+                        <div class="ar deep0-title">Les Bases</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="les_bases/probabilites_et_statistiques.html">Probabilités et Statistiques</a></li>
+                        <li><a href="/les_bases/algebre_lineaire.rst">Algèbre Linéaire</a></li>
+                        <li><a href="/les_bases/geometrie_vectorielle.html">Géométrie vectorielle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">3</div>
+				    	<div class="ar deep0-title">Méthodologie</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/methodologie/conception_d_un_modele.html">Conception d'un modèle</a></li>
+                        <li><a href="/methodologie/mesurer_la_qualite_d_un_modele.html">Mesurer la qualité d'un modèle</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">4</div>
+				    	<div class="ar deep0-title">Modèles Linéaires</div>
+				    </a>
+                    <ul class="deep1">
+                        <li><a href="/modeles_lineaires/regression_lineaire.html">Régression linéaire</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">5</div>
+                        <div class="ar deep0-title">NN</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/nn/mlp.html">Perceptron Multicouche (MLP)</a></li>
+                        <li><a href="/nn/cnn.html">Convolutional Neural Network (CNN)</a></li>
+                        <li><a href="/nn/dnn.html">Deep Neural network (DNN)</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">6</div>
+                        <div class="ar deep0-title" href="/svm.html">SVM</div>
+                    </a>
+                </li>
+                <li class="menu-toggle-open">
+                    <a class="deep0" href="#">
+                        <div class="al deep0-number">7</div>
+                        <div class="ar deep0-title">Outils</div>
+                    </a>
+                    <ul class="deep1">
+                        <li><a href="/outils/spark.html">Spark</a></li>
+                        <li><a href="/outils/cuda.html">Nvidia CUDA</a></li>
+                    </ul>
+                </li>
+                <li class="menu-toggle-open">
+				    <a class="deep0" href="#">
+				    	<div class="al deep0-number">8</div>
+				    	<div class="ar deep0-title">Contribuer</div>
+				    </a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		    <div class="container main-contents">
+		        <div class="page-header" id="banner">
+		            <h1>Probabilités et Statistiques</h1>
+		        </div>
+
+			    <ul class="breadcrumb">
+		      		<li><a href="../index.html">Home</a></li>
+			        
+			          <li><a href="../les_bases.html">Les Bases</a></li>
+			        
+		      		<li class="active">Probabilités et Statistiques</li>
+			    </ul>
+
+			    <div class="bs-docs-section clearfix article" id="article">
+		            
+  <div class="math">
+\[\definecolor{red}{RGB}{255,0,0}
+\definecolor{purple}{RGB}{154,0,154}
+\definecolor{blue}{RGB}{0,0,224}
+\definecolor{green}{RGB}{0,187,0}
+\definecolor{yellow}{RGB}{255,234,0}
+\definecolor{pink}{RGB}{255,77,166}
+\definecolor{orange}{RGB}{255,120,0}
+\definecolor{grey}{RGB}{128,128,128}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{white}{RGB}{255,255,255}
+\newcommand{\R}{\_mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand\given[1][]{\:#1\vert\:}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Cov}{Cov}\]</div>
+<div class="section" id="probabilites-et-statistiques">
+<h1>Probabilités et Statistiques<a class="headerlink" href="#probabilites-et-statistiques" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="les-variables-aleatoires">
+<h2>Les variables aléatoires<a class="headerlink" href="#les-variables-aleatoires" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-differents-types-de-variable-aleatoire-v-a">
+<h3>Les différents types de variable aléatoire (v.a.)<a class="headerlink" href="#les-differents-types-de-variable-aleatoire-v-a" title="Lien permanent vers ce titre">¶</a></h3>
+<img alt="../_images/types_de_variable.png" src="../_images/types_de_variable.png" />
+<p>On distingue deux catégories de v.a. :</p>
+<ul class="simple">
+<li>Qualitatives: Variable portant sur des grandeurs non numériques<ul>
+<li>Nominales : v.a. correspond à des noms sans ordre précis</li>
+<li>Ordinales : v.a. possédant un ordre</li>
+</ul>
+</li>
+<li>Quantitatives : Variable portant sur des grandeurs numériques<ul>
+<li>Discrètes : v.a. dont les valeurs sont énumérables</li>
+<li>Continues : v.a. dont les valeurs sont tellement nombreuses qu’elles en deviennent non-énumérable</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="esperance-ou-moyenne">
+<h3>Espérance (ou moyenne) <span class="math">\(\mathbb{E}(X)\)</span><a class="headerlink" href="#esperance-ou-moyenne" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est la valeur moyenne que prend un v.a.. On note généralement <span class="math">\(\mathbb{E}(X) = \overline{x}\)</span>.</p>
+<ul class="simple">
+<li>Pour une v.a. discrète : <span class="math">\(\mathbb{E}(X) = \sum_{i=1}^{+\inf}{x_i p_i}\)</span></li>
+<li>Pour une v.a. continue : <span class="math">\(\mathbb{E}(X) = \int_{-\inf}^{+\inf}{xf(x)}\)</span></li>
+</ul>
+</div>
+<div class="section" id="variance">
+<h3>Variance <span class="math">\(V(X)\)</span><a class="headerlink" href="#variance" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Valeur indiquant la manière dont se disperse la série statistique autour de sa moyenne. Plus la variance est élevée, plus les valeurs de la série sont écartées les unes des autres.</p>
+<ul class="simple">
+<li>Pour une v.a. discrète : <span class="math">\(V(X) = \sum_{i=1}^{k}{(x_i-\overline{x}) p_i}\)</span></li>
+<li>Pour une v.a. continue : <span class="math">\(V(X) = \int{(x-\overline{x})^2f(x)dx}\)</span></li>
+</ul>
+</div>
+<div class="section" id="ecart-type">
+<h3>Ecart type <span class="math">\(\sigma_X\)</span><a class="headerlink" href="#ecart-type" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Valeur indiquant la manière dont se disperse la série statistique autour de sa moyenne. Plus l’écart type est faible, plus les valeurs de la série sont regroupées autour de la moyenne. L’écart type est égal à la racine carré de la variance.</p>
+<ul class="simple">
+<li>Formule générale : <span class="math">\(\sigma_X=\sqrt{\mathbb{E}[(X-\mathbb{E}(X)]^2}=\sqrt{\mathbb{E}(X^2)-\mathbb{E}(X)^2}\)</span></li>
+<li>Pour une v.a. continue : <span class="math">\(\sigma_X=\sqrt{\sum_{i=1}^{k}{(x_i-\overline{x}) p_i}}\)</span></li>
+<li>Pour une v.a. discrète : <span class="math">\(\sigma_X=\sqrt{\int{(x-\overline{x})^2f(x)dx}}\)</span></li>
+</ul>
+</div>
+<div class="section" id="covariance">
+<h3>Covariance <span class="math">\(\Cov(X,Y)\)</span><a class="headerlink" href="#covariance" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Entre plusieurs v.a., permet de quantifier leur écarts conjoints par rapport à leurs espérances respectives.</p>
+<ul class="simple">
+<li>Pour deux v.a. : <span class="math">\(\Cov(X,Y)=\mathbb{E}[(X-\overline{X})(Y-\overline{Y})]=\frac{1}{N}\sum_{i=1}^{N}{(X-\overline{X})(Y-\overline{Y})}\)</span></li>
+</ul>
+<p>Pour généraliser à <span class="math">\(\color{red}N\)</span> VA, on peut construire la <strong>matrice de covariance</strong> notée <span class="math">\(\Sigma\)</span>. Ici, on prend <span class="math">\(X_i\)</span> comme étant la v.a. <span class="math">\(i\)</span> avec <span class="math">\(i \in N\)</span> :</p>
+<div class="math">
+\[\begin{split}\Sigma = \begin{bmatrix}\Cov(X_1,X_1) &amp; \ldots &amp; \Cov(X_{\color{red}N},X_1)\\ \vdots &amp; \ddots &amp; \vdots \\ \Cov(X_1,X_{\color{red}N}) &amp; \ldots &amp; \Cov(X_{\color{red}N},X_{\color{red}N})\end{bmatrix}\end{split}\]</div>
+<p>Or, <span class="math">\(\Cov(X,X) = V(X)\)</span>, d’où :</p>
+<div class="math">
+\[\begin{split}\Sigma = \begin{bmatrix}V(X_1) &amp; \ldots &amp; \Cov(X_{\color{red}N},X_1)\\ \vdots &amp; \ddots &amp; \vdots \\ \Cov(X_1,X_{\color{red}N}) &amp; \ldots &amp; V(X_{\color{red}{\color{red}N}})\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="section" id="correlation">
+<h3>Corrélation <span class="math">\(\Corr(X,Y)\)</span><a class="headerlink" href="#correlation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Entre plusieurs v.a., permet de mesurer l’intensité de la relation pouvant exister entre elles.</p>
+<ul class="simple">
+<li>Pour deux v.a. : <span class="math">\(\Corr(X,Y)=\frac{\Cov(X,Y)}{\sigma_X \sigma_Y}\)</span></li>
+</ul>
+<p>Pour généraliser à <span class="math">\(\color{red}N\)</span> VA, on peut construire la <strong>matrice de corrélation</strong> notée <span class="math">\(r\)</span>. Ici, on prend <span class="math">\(X_i\)</span> comme étant la v.a. <span class="math">\(i\)</span> avec <span class="math">\(i \in N\)</span> :</p>
+<div class="math">
+\[\begin{split}r = \begin{bmatrix}\Corr(X_1,X_1) &amp; \ldots &amp; \Corr(X_{\color{red}N},X_1)\\ \vdots &amp; \ddots &amp; \vdots \\ \Corr(X_1,X_{\color{red}N}) &amp; \ldots &amp; \Corr(X_{\color{red}N},X_{\color{red}N})\end{bmatrix}\end{split}\]</div>
+<p>Or, <span class="math">\(\Corr(X,X) = 1\)</span>, d’où :</p>
+<div class="math">
+\[\begin{split}r = \begin{bmatrix}1 &amp; \ldots &amp; \Corr(X_{\color{red}N},X_1)\\ \vdots &amp; \ddots &amp; \vdots \\ \Corr(X_1,X_{\color{red}N}) &amp; \ldots &amp; 1\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="section" id="homo-hetero-scedasticite">
+<h3>Homo/Hétéro - scédasticité<a class="headerlink" href="#homo-hetero-scedasticite" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour chaque variable observée, leur variance est soit hétérogène, soit homogène.</p>
+<p>TODO</p>
+</div>
+<div class="section" id="theoreme-de-bayes">
+<h3>Théorème de Bayes<a class="headerlink" href="#theoreme-de-bayes" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="dans-le-cas-binomial">
+<h4>Dans le cas binomial<a class="headerlink" href="#dans-le-cas-binomial" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="math">
+\[\P(A \given B) = \frac{\P(B \given A)\P(A)}{\P(B)} \equiv posterior = \frac{likelihood * prior}{evidence}\]</div>
+<ul class="simple">
+<li>posterior = <span class="math">\(\P(A\given B)\)</span> = probabilité à posteriori de A sachant B</li>
+<li>likelihood = <span class="math">\(\P(B \given A)\)</span> = vraisemblance de A</li>
+<li>prior = <span class="math">\(\P(A)\)</span> = probabilité à priori de A</li>
+<li>evidence = <span class="math">\(\P(B)\)</span> = probabilité à priori de B</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+                    
+                    
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	  var DOCUMENTATION_OPTIONS = {
+	    URL_ROOT:    '../',
+	    VERSION:     '',
+	    COLLAPSE_INDEX: false,
+	    FILE_SUFFIX: '.html',
+	    HAS_SOURCE:  true,
+	    SOURCELINK_SUFFIX: '.txt'
+	  };
+	</script>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../_static/custom.js"></script>
+
+    <script>
+	    $(".menu-toggle").click(function(e) {
+	        if ($("#wrapper").hasClass("toggled")) {
+		        $("#wrapper").toggleClass("toggled");
+				$(".current").toggleClass("opened");
+			} else {
+		        $("#wrapper").toggleClass("toggled");
+				$(".opened").toggleClass("opened");				
+			}
+	    });
+
+	    function openUL(item) {
+	    	var checkElement = item.next();
+			if(checkElement.is('ul')) {
+				if (checkElement.is(':visible')) {
+	    			console.log("visible");
+					checkElement.parent().toggleClass("opened");
+				} else {
+	    			console.log("unvisible");
+					$(".opened").toggleClass("opened");
+					checkElement.parent().toggleClass("opened");
+				}
+			}
+	    };
+	    $(".menu-toggle-open").click(function(e) {
+	    	console.log(e);
+	        if ($("#wrapper").hasClass("toggled")) {
+	        	$("#wrapper").removeClass("toggled");
+				$(".opened").toggleClass("opened");
+				openUL($(this).find("a"));
+	        }
+	    });
+
+	    $('#menu li a').click(function() {openUL($(this))});
+    </script>
+
+    <!-- script_files -->
+		<script defer type="text/javascript" src="../_static/jquery.js"></script>
+		<script defer type="text/javascript" src="../_static/underscore.js"></script>
+		<script defer type="text/javascript" src="../_static/doctools.js"></script>
+		<script defer type="text/javascript" src="../_static/translations.js"></script>
+		<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_RGBorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: {
+                extensions: ["color.js"]
+            }
+        });
+    </script>
+
+</body>
+
+
+ 
