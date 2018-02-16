@@ -10,7 +10,7 @@ Les variables aléatoires
 Les différents types de variable aléatoire (v.a.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: img/types_de_variable.png
+.. image:: ../img/types_de_variable.png
 
 On distingue deux catégories de v.a. :
 

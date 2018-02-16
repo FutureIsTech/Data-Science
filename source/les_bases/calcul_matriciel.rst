@@ -119,11 +119,11 @@ C'est une transformation transposant une matrice par rapport à sa diagonale.
 
 .. math::
 
-   \textrm{Si } U = \begin{bmatrix}1+i & 1 & i-2 \\ 2 & 4 & 1 \\ 3 & -i & i\end{bmatrix}\textrm{alors } U^{T} = \begin{bmatrix}1+i & 2 & 3 \\ 1 & 4 & -i \\ i-2 & 1 & i\end{bmatrix}
+   \text{Si } U = \begin{bmatrix}1+i & 1 & i-2 \\ 2 & 4 & 1 \\ 3 & -i & i\end{bmatrix}\text{alors } U^{T} = \begin{bmatrix}1+i & 2 & 3 \\ 1 & 4 & -i \\ i-2 & 1 & i\end{bmatrix}
 
 
 .. math::
 
-   \textrm{Si } U = \begin{bmatrix}1 & 2 \\ 3 & 4 \\ 5 & 6\end{bmatrix}\textrm{alors } U^{T} = \begin{bmatrix}1 & 3 & 5 \\ 2 & 4 & 6\end{bmatrix}
+   \text{Si } U = \begin{bmatrix}1 & 2 \\ 3 & 4 \\ 5 & 6\end{bmatrix}\text{alors } U^{T} = \begin{bmatrix}1 & 3 & 5 \\ 2 & 4 & 6\end{bmatrix}
 
 On a donc :math:`(M_{i,j})=(M_{j,i})`
